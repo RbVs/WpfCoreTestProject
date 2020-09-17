@@ -5,27 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppCore"
         xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainWindow}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Wpf Sampe App --- CI / CD" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-        <wpf:CartesianChart Grid.Row="1" LegendLocation="Bottom" >
+        <materialDesign:ColorZone Padding="20" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  Mode="PrimaryMid" Grid.ColumnSpan="2" />
+        <TextBlock Text="Wpf Sampe App --- CI / CD" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" FontSize="20"/>
+        <wpf:CartesianChart Grid.Row="1" Grid.Column="0" LegendLocation="Bottom">
             <wpf:CartesianChart.Series>
                 <wpf:ColumnSeries Title="Summe" Values="1,2,3,4,5,6,7,8" Fill="#7f8c8d" />
             </wpf:CartesianChart.Series>
         </wpf:CartesianChart>
         <wpf:CartesianChart Grid.Row="1" Grid.Column="1">
             <wpf:CartesianChart.Series>
-                <wpf:LineSeries Values="20,304,123,52,23,4,25,"></wpf:LineSeries>
-                <wpf:LineSeries Values="38,23,41,23,45,23,4"></wpf:LineSeries>
+                <wpf:LineSeries Values="20,304,123,52,23,4,25," />
+                <wpf:LineSeries Values="38,23,41,23,45,23,4" />
             </wpf:CartesianChart.Series>
         </wpf:CartesianChart>
     </Grid>
