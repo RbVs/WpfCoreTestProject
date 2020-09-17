@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfAppCore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCore"
+        xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainWindow}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Hallo" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <wpf:CartesianChart LegendLocation="Bottom" >
+            <wpf:CartesianChart.Series>
+                <wpf:ColumnSeries Title="Summe" Values="1,2,3,4,5,6,7,8" Fill="#7f8c8d" />
+            </wpf:CartesianChart.Series>
+        </wpf:CartesianChart>
+        <wpf:CartesianChart Grid.Column="1">
+            <wpf:CartesianChart.Series>
+                <wpf:LineSeries Values="20,304,123,52,23,4,25,"></wpf:LineSeries>
+                <wpf:LineSeries Values="38,23,41,23,45,23,4"></wpf:LineSeries>
+            </wpf:CartesianChart.Series>
+        </wpf:CartesianChart>
+    </Grid>
+</Window>
