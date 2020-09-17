@@ -8,17 +8,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainWindow}">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Hallo" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <wpf:CartesianChart LegendLocation="Bottom" >
+        <TextBlock Text="Wpf Sampe App --- CI / CD" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <wpf:CartesianChart Grid.Row="1" LegendLocation="Bottom" >
             <wpf:CartesianChart.Series>
                 <wpf:ColumnSeries Title="Summe" Values="1,2,3,4,5,6,7,8" Fill="#7f8c8d" />
             </wpf:CartesianChart.Series>
         </wpf:CartesianChart>
-        <wpf:CartesianChart Grid.Column="1">
+        <wpf:CartesianChart Grid.Row="1" Grid.Column="1">
             <wpf:CartesianChart.Series>
                 <wpf:LineSeries Values="20,304,123,52,23,4,25,"></wpf:LineSeries>
                 <wpf:LineSeries Values="38,23,41,23,45,23,4"></wpf:LineSeries>
