@@ -1,3 +1,3 @@
 # WpfCoreTestProject
 
-Sample wpf core app
+Simple wpf core app
