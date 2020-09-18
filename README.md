@@ -3,3 +3,5 @@
 Simple wpf core app
 
 some changes
+
+pp
